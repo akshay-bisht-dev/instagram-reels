@@ -6,7 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS and JSON body parsing
-app.use(cors());
+app.use(cors({
+  origin: 'https://instagram-reels-frontend.onrender.com', // Allow your frontend
+  methods: ['GET', 'POST'],
+}));
 app.use(express.json());
 
 // Replace with your Apify API token
