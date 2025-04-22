@@ -17,7 +17,7 @@ const InstagramReelsFetcher = () => {
         setFilteredReels([]);
     
         try {
-            const response = await axios.post('http://localhost:5000/fetch-reels', {
+            const response = await axios.post('https://instagram-reels-backend.onrender.com/fetch-reels', {
                 // no need to send anything now
                 resultsLimit: 100,
             });
